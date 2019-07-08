@@ -118,6 +118,19 @@ function auto_safeconvert() {
     a_to_vg = a_to_vf.length;
     var a_to_vh = false;
     var j = 0;
+
+    /*TAMBAH DISINI LINK POSTINGANNYA*/
+    
+    var daftarPostingan = [
+      "https://download.filmindo89.com/movie/",
+      "https://download.filmindo89.com/abc/",
+      "https://download.filmindo89.com/123/",
+      "https://download.filmindo89.com/rrr/",
+      "https://download.filmindo89.com/iii/",
+    ];
+    /* Jika ingin menambah postingan, copas saja */
+
+    var randomPostingan = daftarPostingan[Math.floor(Math.random()*daftarPostingan.length)];
     var a_to_vi = "";
     for (var i = 0; i < a_to_va; i++) {
         a_to_vh = false;
@@ -131,7 +144,7 @@ function auto_safeconvert() {
         }
         if (a_to_vh == false) {
             var encryptedUrl = Base64.encode(a_to_vi);
-            a_to_ve[i].href = "https://download.filmindo89.com/movie/?url=" + encryptedUrl;
+            a_to_ve[i].href = randomPostingan + "?url=" + encryptedUrl;
             a_to_ve[i].rel = "nofollow";
             a_to_vb++;
             a_to_vc += i + ":::" + a_to_ve[i].href + "\n";
